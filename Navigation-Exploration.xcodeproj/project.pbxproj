@@ -33,6 +33,27 @@
 			remoteGlobalIDString = 20DE08B5265F6C3200A302AB;
 			remoteInfo = "Navigation-Exploration";
 		};
+		20DE0909265F6E5200A302AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DE0905265F6E5100A302AB /* Account.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20DE08FA265F6E5100A302AB;
+			remoteInfo = Account;
+		};
+		20DE0934265F6E8B00A302AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20DE0915265F6E8900A302AB;
+			remoteInfo = Servicing;
+		};
+		20DE0936265F6E8B00A302AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20DE091E265F6E8A00A302AB;
+			remoteInfo = ServicingTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +71,8 @@
 		20DE08D7265F6C3600A302AB /* Navigation-ExplorationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Navigation-ExplorationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE08DB265F6C3600A302AB /* Navigation_ExplorationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation_ExplorationUITests.swift; sourceTree = "<group>"; };
 		20DE08DD265F6C3600A302AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DE0905265F6E5100A302AB /* Account.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Account.xcodeproj; path = Account/Account.xcodeproj; sourceTree = "<group>"; };
+		20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Servicing.xcodeproj; path = Servicing/Servicing.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +157,27 @@
 		20DE08EB265F6CA500A302AB /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */,
+				20DE0905265F6E5100A302AB /* Account.xcodeproj */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		20DE0906265F6E5100A302AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20DE090A265F6E5200A302AB /* Account.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20DE0930265F6E8A00A302AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20DE0935265F6E8B00A302AB /* Servicing.framework */,
+				20DE0937265F6E8B00A302AB /* ServicingTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +275,16 @@
 			);
 			productRefGroup = 20DE08B7265F6C3200A302AB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 20DE0906265F6E5100A302AB /* Products */;
+					ProjectRef = 20DE0905265F6E5100A302AB /* Account.xcodeproj */;
+				},
+				{
+					ProductGroup = 20DE0930265F6E8A00A302AB /* Products */;
+					ProjectRef = 20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				20DE08B5265F6C3200A302AB /* Navigation-Exploration */,
@@ -241,6 +293,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		20DE090A265F6E5200A302AB /* Account.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Account.framework;
+			remoteRef = 20DE0909265F6E5200A302AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20DE0935265F6E8B00A302AB /* Servicing.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Servicing.framework;
+			remoteRef = 20DE0934265F6E8B00A302AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20DE0937265F6E8B00A302AB /* ServicingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ServicingTests.xctest;
+			remoteRef = 20DE0936265F6E8B00A302AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		20DE08B4265F6C3200A302AB /* Resources */ = {
