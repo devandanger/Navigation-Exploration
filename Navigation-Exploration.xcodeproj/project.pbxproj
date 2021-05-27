@@ -54,6 +54,20 @@
 			remoteGlobalIDString = 20DE091E265F6E8A00A302AB;
 			remoteInfo = ServicingTests;
 		};
+		20DE0968265F709A00A302AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DE0963265F709900A302AB /* DependencyProvider.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20DE0949265F709900A302AB;
+			remoteInfo = DependencyProvider;
+		};
+		20DE096A265F709A00A302AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DE0963265F709900A302AB /* DependencyProvider.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20DE0952265F709900A302AB;
+			remoteInfo = DependencyProviderTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +87,7 @@
 		20DE08DD265F6C3600A302AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DE0905265F6E5100A302AB /* Account.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Account.xcodeproj; path = Account/Account.xcodeproj; sourceTree = "<group>"; };
 		20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Servicing.xcodeproj; path = Servicing/Servicing.xcodeproj; sourceTree = "<group>"; };
+		20DE0963265F709900A302AB /* DependencyProvider.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DependencyProvider.xcodeproj; path = DependencyProvider/DependencyProvider.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,7 @@
 		20DE08AD265F6C3200A302AB = {
 			isa = PBXGroup;
 			children = (
+				20DE093E265F705200A302AB /* Core */,
 				20DE08EB265F6CA500A302AB /* Features */,
 				20DE08B8265F6C3200A302AB /* Navigation-Exploration */,
 				20DE08CF265F6C3600A302AB /* Navigation-ExplorationTests */,
@@ -176,6 +192,23 @@
 			children = (
 				20DE0935265F6E8B00A302AB /* Servicing.framework */,
 				20DE0937265F6E8B00A302AB /* ServicingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20DE093E265F705200A302AB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				20DE0963265F709900A302AB /* DependencyProvider.xcodeproj */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		20DE0964265F709900A302AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20DE0969265F709A00A302AB /* DependencyProvider.framework */,
+				20DE096B265F709A00A302AB /* DependencyProviderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +314,10 @@
 					ProjectRef = 20DE0905265F6E5100A302AB /* Account.xcodeproj */;
 				},
 				{
+					ProductGroup = 20DE0964265F709900A302AB /* Products */;
+					ProjectRef = 20DE0963265F709900A302AB /* DependencyProvider.xcodeproj */;
+				},
+				{
 					ProductGroup = 20DE0930265F6E8A00A302AB /* Products */;
 					ProjectRef = 20DE092F265F6E8A00A302AB /* Servicing.xcodeproj */;
 				},
@@ -314,6 +351,20 @@
 			fileType = wrapper.cfbundle;
 			path = ServicingTests.xctest;
 			remoteRef = 20DE0936265F6E8B00A302AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20DE0969265F709A00A302AB /* DependencyProvider.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DependencyProvider.framework;
+			remoteRef = 20DE0968265F709A00A302AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20DE096B265F709A00A302AB /* DependencyProviderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DependencyProviderTests.xctest;
+			remoteRef = 20DE096A265F709A00A302AB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
