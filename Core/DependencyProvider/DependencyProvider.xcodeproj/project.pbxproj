@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		20DE0953265F709900A302AB /* DependencyProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DE0949265F709900A302AB /* DependencyProvider.framework */; };
 		20DE0958265F709900A302AB /* DependencyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE0957265F709900A302AB /* DependencyProviderTests.swift */; };
 		20DE095A265F709900A302AB /* DependencyProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 20DE094C265F709900A302AB /* DependencyProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20DE096E265F710400A302AB /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 20DE096D265F710400A302AB /* Swinject */; };
+		20DE09732660A85400A302AB /* Bootstrappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE09722660A85400A302AB /* Bootstrappable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		20DE0952265F709900A302AB /* DependencyProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE0957265F709900A302AB /* DependencyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProviderTests.swift; sourceTree = "<group>"; };
 		20DE0959265F709900A302AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DE09722660A85400A302AB /* Bootstrappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrappable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DE096E265F710400A302AB /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +77,7 @@
 			children = (
 				20DE094C265F709900A302AB /* DependencyProvider.h */,
 				20DE094D265F709900A302AB /* Info.plist */,
+				20DE09722660A85400A302AB /* Bootstrappable.swift */,
 			);
 			path = DependencyProvider;
 			sourceTree = "<group>";
@@ -114,6 +119,9 @@
 			dependencies = (
 			);
 			name = DependencyProvider;
+			packageProductDependencies = (
+				20DE096D265F710400A302AB /* Swinject */,
+			);
 			productName = DependencyProvider;
 			productReference = 20DE0949265F709900A302AB /* DependencyProvider.framework */;
 			productType = "com.apple.product-type.framework";
@@ -147,6 +155,7 @@
 				TargetAttributes = {
 					20DE0948265F709900A302AB = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					20DE0951265F709900A302AB = {
 						CreatedOnToolsVersion = 12.5;
@@ -162,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 20DE093F265F709900A302AB;
+			packageReferences = (
+				20DE096C265F710400A302AB /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 20DE094A265F709900A302AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DE09732660A85400A302AB /* Bootstrappable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		20DE095E265F709900A302AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Q7BEAG244J;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mightystrong.DependencyProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		20DE095F265F709900A302AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Q7BEAG244J;
@@ -389,6 +405,7 @@
 		20DE0961265F709900A302AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7BEAG244J;
 				INFOPLIST_FILE = DependencyProviderTests/Info.plist;
@@ -407,6 +424,7 @@
 		20DE0962265F709900A302AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7BEAG244J;
 				INFOPLIST_FILE = DependencyProviderTests/Info.plist;
@@ -453,6 +471,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20DE096C265F710400A302AB /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20DE096D265F710400A302AB /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DE096C265F710400A302AB /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20DE0940265F709900A302AB /* Project object */;
 }
